@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Math Helper — make math make sense</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Math Helper home"><span class="brand-mark">∑</span> Math Helper</a>
+      <span class="top-note"><span class="status-dot"></span> Your friendly math workspace</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">A little help goes a long way</p>
+      <h1>Make math<br><span>make sense.</span></h1>
+      <p class="intro-copy">Crunch a calculation or ask for a patient, step-by-step explanation.</p>
+    </section>
+
+    <section class="cards" aria-label="Math tools">
+      <article class="card calculator-card">
+        <div class="card-heading"><span class="icon">⌗</span><div><h2>Quick calculator</h2><p>For the numbers in front of you.</p></div></div>
+        <form id="calc-form">
+          <label for="expression">Your expression</label>
+          <div class="input-row"><input id="expression" name="expression" placeholder="e.g. (18 + 6) / 3" autocomplete="off" required><button class="button primary" type="submit">Calculate <span>→</span></button></div>
+          <p class="hint">Supports +, −, ×, ÷, parentheses, powers (**), and more.</p>
+        </form>
+        <div id="calc-result" class="result" aria-live="polite" hidden></div>
+      </article>
+
+      <article class="card tutor-card">
+        <div class="card-heading"><span class="icon sparkle">✳</span><div><h2>Ask the math tutor</h2><p>Get a clear explanation, one step at a time.</p></div></div>
+        <form id="ask-form">
+          <label for="question">What are you working on?</label>
+          <textarea id="question" name="question" rows="4" maxlength="2000" placeholder="e.g. How do I solve 2x + 5 = 17?" required></textarea>
+          <div class="ask-footer"><span class="hint">Please don't include personal information.</span><button class="button primary" type="submit">Explain it <span>→</span></button></div>
+        </form>
+        <div id="ask-result" class="result answer" aria-live="polite" hidden></div>
+      </article>
+    </section>
+    <footer><span>Built for curious minds.</span><span>Guest access · 20 requests per hour</span></footer>
+  </main>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

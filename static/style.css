@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root { color-scheme: light; --ink: #1c2540; --muted: #788096; --blue: #5965dc; --line: #e8eaf2; --paper: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at 75% 4%, #e8eaff 0, transparent 34%), #f6f7fb; color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+.shell { width: min(1050px, calc(100% - 48px)); margin: 0 auto; }
+.topbar { height: 82px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(28,37,64,.08); }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-family: Manrope, sans-serif; font-size: 17px; font-weight: 800; }
+.brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: var(--blue); color: white; font-size: 22px; }
+.top-note, footer { color: var(--muted); font-size: 12px; }
+.status-dot { display: inline-block; width: 7px; height: 7px; background: #54bc91; border-radius: 50%; margin-right: 7px; }
+.intro { padding: 66px 0 42px; max-width: 650px; }
+.eyebrow { color: var(--blue); text-transform: uppercase; letter-spacing: .14em; font-weight: 700; font-size: 10px; }
+h1 { margin: 15px 0 14px; font-family: Manrope, sans-serif; letter-spacing: -.055em; font-size: clamp(44px, 7vw, 68px); line-height: 1.04; }
+h1 span { color: var(--blue); }
+.intro-copy { color: var(--muted); font-size: 16px; line-height: 1.65; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.card { background: var(--paper); border: 1px solid rgba(28,37,64,.07); border-radius: 17px; padding: 25px; box-shadow: 0 12px 35px rgba(37,44,86,.045); }
+.card-heading { display: flex; gap: 13px; align-items: center; margin-bottom: 25px; }
+.icon { display: grid; place-items: center; width: 42px; height: 42px; flex: 0 0 42px; border-radius: 13px; background: #eef0ff; color: var(--blue); font-size: 24px; }
+.sparkle { background: #f5efff; color: #9661d8; }
+h2 { font-family: Manrope, sans-serif; font-size: 17px; margin: 0 0 4px; }
+.card-heading p, .hint { margin: 0; color: var(--muted); font-size: 12px; }
+label { display: block; font-size: 12px; font-weight: 700; margin-bottom: 9px; }
+input, textarea { width: 100%; color: var(--ink); border: 1px solid var(--line); border-radius: 10px; outline: none; background: #fcfcfe; font: inherit; font-size: 13px; transition: border .2s, box-shadow .2s; }
+input { height: 46px; padding: 0 13px; }
+textarea { min-height: 102px; padding: 13px; resize: vertical; line-height: 1.5; }
+input:focus, textarea:focus { border-color: #9aa2f0; box-shadow: 0 0 0 3px #5965dc17; }
+.input-row { display: flex; gap: 9px; }
+.button { border: 0; border-radius: 9px; padding: 0 15px; min-height: 43px; white-space: nowrap; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; transition: transform .15s, opacity .15s; }
+.button:hover { transform: translateY(-1px); }
+.button:disabled { opacity: .6; cursor: wait; }
+.primary { background: var(--blue); color: white; }
+.primary span { margin-left: 9px; }
+.hint { margin-top: 10px; line-height: 1.5; }
+.ask-footer { margin-top: 12px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.ask-footer .hint { margin: 0; }
+.result { margin-top: 18px; padding: 13px 15px; border-radius: 10px; background: #f0f8f5; color: #267753; font-weight: 700; font-size: 14px; overflow-wrap: anywhere; white-space: pre-wrap; line-height: 1.65; }
+.result.answer { background: #f5f4ff; color: #363b68; font-weight: 400; }
+.result.error { background: #fff2f0; color: #b04438; }
+footer { margin: 30px 0 36px; display: flex; justify-content: space-between; }
+@media (max-width: 720px) { .shell { width: min(100% - 32px, 500px); } .intro { padding: 48px 0 30px; } .cards { grid-template-columns: 1fr; } .top-note { font-size: 0; } .top-note .status-dot { font-size: initial; } }
+@media (max-width: 420px) { .card { padding: 19px; } .input-row { flex-direction: column; } footer { gap: 12px; flex-direction: column; } .ask-footer { align-items: flex-start; flex-direction: column; } }
